@@ -1,7 +1,26 @@
+
 import pymysql
 import pandas as pd
+import streamlit as st
 def make_connection():
-    mydb=pymysql.connect(host="localhost",user="root",password="ankit@16",database="sentiment_analysis")
+    mydb = pymysql.connect(
+        host=st.secrets["mysql.railway.internal"],
+        port=int(st.secrets["3306"]),
+        user=st.secrets["root"],
+        password=st.secrets["VglFuDIhNuSTahvIyvjgMGHOUQYSaeqU"],
+        database=st.secrets["railway"]
+    )
+    return mydb
+
+
+def make_connection():
+    mydb = pymysql.connect(
+        host=st.secrets["host"],
+        port=int(st.secrets["port"]),
+        user=st.secrets["user"],
+        password=st.secrets["password"],
+        database=st.secrets["database"]
+    )
     return mydb
 
 
