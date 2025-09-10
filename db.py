@@ -13,17 +13,6 @@ def make_connection():
     return mydb
 
 
-def make_connection():
-    mydb = pymysql.connect(
-        host=st.secrets["host"],
-        port=int(st.secrets["port"]),
-        user=st.secrets["user"],
-        password=st.secrets["password"],
-        database=st.secrets["database"]
-    )
-    return mydb
-
-
 def insert_data(text,sentiment):
     mydb=make_connection()
     cursor=mydb.cursor()
