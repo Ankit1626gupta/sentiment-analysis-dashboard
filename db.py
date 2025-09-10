@@ -1,14 +1,13 @@
 
 import pymysql
 import pandas as pd
-import streamlit as st
 def make_connection():
     mydb = pymysql.connect(
-        host=st.secrets["mysql.railway.internal"],
-        port=int(st.secrets["3306"]),
-        user=st.secrets["root"],
-        password=st.secrets["VglFuDIhNuSTahvIyvjgMGHOUQYSaeqU"],
-        database=st.secrets["railway"]
+        host="mysql.railway.internal",
+        port=int("3306"),
+        user="root",
+        password="VglFuDIhNuSTahvIyvjgMGHOUQYSaeqU",
+        database="railway"
     )
     return mydb
 
