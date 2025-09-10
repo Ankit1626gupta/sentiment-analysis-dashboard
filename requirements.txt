@@ -1,0 +1,9 @@
+streamlit
+pymysql
+cryptography
+requests
+tweepy
+vaderSentiment
+mysql-connector-python
+pandas
+matplotlib
