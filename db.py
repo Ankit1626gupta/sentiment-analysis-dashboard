@@ -1,15 +1,11 @@
-import streamlit as st
+
+import pandas as pd
 import pymysql
 import pandas as pd
 def make_connection():
-    mydb = pymysql.connect(
-        host=st.secrets["host"],
-        port=int(st.secrets["port"]),
-        user=st.secrets["user"],
-        password=st.secrets["password"],
-        database=st.secrets["database"]
-    )
+    mydb=pymysql.connect(host="localhost",user="root",password="ankit@16",database="sentiment_analysis")
     return mydb
+
 
 
 
